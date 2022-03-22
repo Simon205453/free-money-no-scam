@@ -1,0 +1,29 @@
+body {
+    background-image: url("http://cdnimgs.directiq.com/_diqapp/resources/Email%20Devil%20Pic.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+h2 {
+    color: crimson;
+    font-size: xxx-large;
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a {
+    width: auto;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    margin-top: 200px;
+}

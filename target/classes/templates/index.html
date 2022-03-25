@@ -7,14 +7,59 @@
 </head>
 <body>
     <!-- TODO User should be able to submit data -->
+
     <section class="content">
             <h1>MAKE BIG MONEY, VERY EASY, VERY REAL</h1>
+        <p th:each="Email : ${allMails}">
+            <span th:text="${Email.getEmailString()}"></span>
+        </p>
             <form method="POST" action="/submit">
                 <label for="email">ENTER EMAIL HERE --></label>
                 <input id="email" type="text" name="email" placeholder="e-mail goes here"/>
                 <input type="submit" value="Submit">
             </form>
+            <form method="post" action="/fetchmails">
+                <input type="submit" value="Show mails">
+            </form>
+            <form method="post" action="/newsfetch">
+                <input type="submit" value="Get news">
+            </form>
+
     </section>
+    <!-- TODO button to show currently added emails -->
+
+
+
+
+
+
+
+<!--
+<button onclick="hideMailsFunction()">
+            Show currently listed mails
+        </button>
+
+    <div class="mails" id="myDIV">
+        <p class="mailP" th:each="email : ${allMails}">
+            <span th:text="${email.getEmailString()}"></span>
+        </p>
+    </div>
+        <script>
+        function hideMailsFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+-->
+
+
+
+
+
 
 </body>
 </html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{showCurrentlyListedMails.css}" href="../static/showCurrentlyListedMails.css">
+</head>
+<body>
+<a href="/">
+    <h2>Back home</h2>
+</a>
+<p th:each="Email : ${allMails}">
+    <span th:text="${Email.getEmailString()}"></span>
+</p>
+
+</body>
+</html>

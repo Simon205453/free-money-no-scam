@@ -14,26 +14,14 @@ import static com.example.freemoneynoscam.services.DBService.connectDB;
 public class FreeMoneyNoScamApplication {
 
     public static Statement statement;
-    public static Connection connection;
+    public static Connection connection = DBService.connectDB();
     public static String sqlString;
-    static ResultSet resultSet;
+    public static ResultSet rs;
 
     public static void main(String[] args) {
         SpringApplication.run(FreeMoneyNoScamApplication.class, args);
         connectDB();
 
-    }
-
-    public static void selectData(){
-        try {
-            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            sqlString = "SELECT `user_emails`" +
-                    "FROM iduser_emails, user_emails" +
-                    "WHERE user_emails.user_emails";
-            resultSet = statement.executeQuery(sqlString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
 

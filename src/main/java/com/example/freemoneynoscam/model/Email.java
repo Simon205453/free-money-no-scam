@@ -10,4 +10,11 @@ public class Email {
     public String getEmailString() {
         return email;
     }
+
+    @Override
+    public String toString() {
+        return "Email{" +
+                "email='" + email + '\'' +
+                '}';
+    }
 }
